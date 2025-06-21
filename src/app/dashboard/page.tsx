@@ -5,10 +5,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getMyUser } from "@/services/direccionamiento";
 import { useUser } from "@auth0/nextjs-auth0/client";
-import OngDashboard from "@/components/OngDashboard";
+
 import UsuarioDashboard from "@/components/UsuarioDashboard";
 import AdminDashboard from "@/components/componentsadmin/AdminDashboard";
 import { getUserRole } from '../../utils/getUserRole';
+import OngDashboard from "@/components/componentsONG/OngDashboard";
 
 export default function DashboardPage() {
   const router = useRouter();

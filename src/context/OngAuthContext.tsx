@@ -12,6 +12,8 @@ export const OngAuthProvider = ({ children }: { children: ReactNode }) => {
 
   const login = async (email: string, password: string): Promise<boolean> => {
     const res = await ongLoginService(email, password);
+      console.log("Respuesta login:", res); // 👈
+      
     if (res.ok && res.ong) {
       setOng(res.ong);
       return true;

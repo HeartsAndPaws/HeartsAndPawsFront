@@ -1,21 +1,16 @@
 @import "tailwindcss";
 
+/* Colores base: texto negro y fondo blanco */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000; /* Negro */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Desactiva modo oscuro si querés que siempre sea fondo blanco y texto negro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;  /* No cambia el fondo */
+    --foreground: #000000;  /* No cambia el texto */
   }
 }
 
